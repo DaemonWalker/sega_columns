@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(\"E:/SteamLibrary/steamapps/common/Godot Engine/godot.windows.opt.tools.64.exe\" --headless --path \"e:/workspace/godot/columns\" res://scenes/main.tscn --quit-after 2000)",
+      "Bash(\"E:/SteamLibrary/steamapps/common/Godot Engine/godot.windows.opt.tools.64.exe\" --headless --path \"e:/workspace/godot/columns\" res://scenes/main.tscn --quit-after 5000)",
+      "Bash(\"E:/SteamLibrary/steamapps/common/Godot Engine/godot.windows.opt.tools.64.exe\" --headless --path \"e:/workspace/godot/columns\" --quit)",
+      "Bash(ls -la e:/workspace/godot/columns/*.csproj e:/workspace/godot/columns/*.sln)",
+      "Bash(dotnet build:*)",
+      "Bash(ls \"E:/SteamLibrary/steamapps/common/Godot Engine\"/*.exe)",
+      "Bash(\"E:/ProgramData/Godot_v4.6.2-stable_mono_win64/Godot_v4.6.2-stable_mono_win64.exe\" --headless --path \"e:/workspace/godot/columns\" --quit)"
+    ]
+  }
+}

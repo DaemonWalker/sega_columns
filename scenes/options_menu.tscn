@@ -1,0 +1,149 @@
+[gd_scene format=3 uid="uid://dopm1qrbwrp1"]
+
+[ext_resource type="Script" path="res://scripts/options_menu.gd" id="1_optionsmenu"]
+[ext_resource type="FontFile" path="res://assets/fonts/PressStart2P-Regular.ttf" id="2_font"]
+[ext_resource type="Texture2D" path="res://assets/backgrounds/bg_brick.png" id="3_bg"]
+
+[node name="OptionsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_optionsmenu")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_bg")
+stretch_mode = 1
+
+[node name="Overlay" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.08, 0.08, 0.12, 0.55)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 48
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 48
+theme_override_constants/margin_bottom = 40
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="TitleLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 48
+text = "Options"
+horizontal_alignment = 1
+
+[node name="TabContainer" type="TabContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Game" type="MarginContainer" parent="MarginContainer/VBoxContainer/TabContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Game"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="DifficultyLabel" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Game/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 24
+text = "Difficulty"
+
+[node name="DifficultyOption" type="OptionButton" parent="MarginContainer/VBoxContainer/TabContainer/Game/VBoxContainer"]
+layout_mode = 2
+
+[node name="HintModeLabel" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Game/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 24
+text = "Hint Mode"
+
+[node name="HintModeOption" type="OptionButton" parent="MarginContainer/VBoxContainer/TabContainer/Game/VBoxContainer"]
+layout_mode = 2
+
+[node name="Display" type="MarginContainer" parent="MarginContainer/VBoxContainer/TabContainer"]
+visible = false
+layout_mode = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Display"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="ResolutionLabel" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Display/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 24
+text = "Resolution"
+
+[node name="ResolutionOption" type="OptionButton" parent="MarginContainer/VBoxContainer/TabContainer/Display/VBoxContainer"]
+layout_mode = 2
+
+[node name="WindowModeLabel" type="Label" parent="MarginContainer/VBoxContainer/TabContainer/Display/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 24
+text = "Window Mode"
+
+[node name="WindowModeOption" type="OptionButton" parent="MarginContainer/VBoxContainer/TabContainer/Display/VBoxContainer"]
+layout_mode = 2
+
+[node name="VSyncCheck" type="CheckButton" parent="MarginContainer/VBoxContainer/TabContainer/Display/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 24
+text = "Vertical Sync"
+
+[node name="Controls" type="MarginContainer" parent="MarginContainer/VBoxContainer/TabContainer"]
+visible = false
+layout_mode = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer/TabContainer/Controls"]
+layout_mode = 2
+
+[node name="BindingsVBox" type="VBoxContainer" parent="MarginContainer/VBoxContainer/TabContainer/Controls/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 12
+
+[node name="BackButton" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 52)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("2_font")
+theme_override_font_sizes/font_size = 28
+text = "Back"

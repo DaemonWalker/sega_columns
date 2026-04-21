@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bqbkp7pwb2tjh"]
+
+[ext_resource type="Script" path="res://scripts/jewel.gd" id="1_jewel"]
+
+[node name="Jewel" type="Sprite2D"]
+script = ExtResource("1_jewel")
